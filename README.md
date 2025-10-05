@@ -6,8 +6,9 @@ Built using **Node.js**, **Express**, **EJS**, and **Axios** for API communicati
 🏋️‍♂️ This project was built for **Full-Stack development training**.
 
 ---
-
-
+<img width="1869" height="969" alt="Screenshot 2025-10-06 025437" src="https://github.com/user-attachments/assets/8ae95650-a858-4066-b15b-ecc441f66365" />
+<img width="1853" height="929" alt="Screenshot 2025-10-06 025156" src="https://github.com/user-attachments/assets/e2ae1624-97ff-4ff8-938d-db5b37d3e713" />
+<img width="1852" height="925" alt="Screenshot 2025-10-06 025421" src="https://github.com/user-attachments/assets/99f69e43-816c-4746-aca0-e57c09ddbc43" />
 
 ---
 
