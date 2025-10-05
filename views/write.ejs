@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit and Read</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+    <%if(locals.post){%>
+
+    <form action='/update/posts/<%=post.id%>' method="POST">
+        <div class="container-button">
+            <button class="button-newpost" type="submit"> <%= submit%> </button>
+        </div>
+
+        <input
+                type="text"
+                class="head-editor"
+                name="title"
+                value='<%= post.title%>'
+        >
+        <textarea
+                name="content"
+                class="minimal-editor"
+                rows="10"
+        >
+            <%=  post.content %>
+        </textarea>
+    </form>
+
+    <%} else {%>
+    <form action="/new/posts" method="POST">
+        <div class="container-button">
+            <button class="button-newpost" type="submit"> <%= submit%> </button>
+        </div>
+
+
+        <input
+                type="text"
+                class="head-editor"
+                name="title"
+                placeholder="Title"
+        >
+        <textarea
+                id="autoGrow"
+                class="minimal-editor"
+                placeholder="Tell your story..."
+                name="content"
+        >
+
+        </textarea>
+
+    </form>
+    <%}%>
+
+
+
+
+
+
+    <script>
+        const textarea = document.getElementById('autoGrow');
+
+        function autoGrow(element) {
+            element.style.height = 'auto';
+            element.style.height = element.scrollHeight + 'px';
+        }
+
+        autoGrow(textarea);
+
+        textarea.addEventListener('input', function () {
+            autoGrow(this);
+        });
+    </script>
+</body>
+</html>
